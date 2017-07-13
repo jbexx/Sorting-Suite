@@ -1,26 +1,13 @@
-let numArray;
-
-function makeArray(items, maxNum) {
-  numArray = [];
-  for (var i = 0; i < items; i++) {
-    numArray.push(Math.floor(Math.random() * maxNum + 1));
-  }
-
-  console.log('initial array: ', numArray);
-  return numArray
-};
-
-function insertion(numArray) {
-  for (var i = 1; i < numArray.length; i++) {
+const insertion = Array => {
+  for (var i = 1; i < Array.length; i++) {
     let j = i - 1
-    while (numArray[i] < numArray[j]) {
-      [numArray[i], numArray[j]] = [numArray[j], numArray[i]];
+    while (Array[i] < Array[j]) {
+      [Array[i], Array[j]] = [Array[j], Array[i]];
       j--;
       i = j + 1;
     }
   }
-    console.log('sorted array: ', numArray);
-
+  return Array
 };
     //start at position 1 and compare with position 0
     //if [1] < [0] then swap else leave it like it is
@@ -30,9 +17,4 @@ function insertion(numArray) {
     //if [3] < [2] then swap else do nothing
 
 
-$(document).ready(() => {
-  makeArray(100, 10);
-  insertion(numArray);
-})
-
-// export default insertion
+export default insertion
