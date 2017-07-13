@@ -1,6 +1,7 @@
 
 export let randomNumbers = (items, min, max) => {
   let numArray = [];
+
   for (let i = 0; i < items; i++) {
     numArray.push(Math.floor(Math.random() * (max - min + 1)) + min)
   }
@@ -19,8 +20,10 @@ export let randomLetters = amnt => {
     'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
     'W', 'X', 'Y', 'Z' ];
   let letterArray = [];
+
   for (let i = 0; i < amnt; i++) {
     let index = Math.floor(Math.random() * 52);
+    
     letterArray.push(alphabet[index]);
   }
   return letterArray;
