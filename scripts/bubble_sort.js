@@ -1,12 +1,12 @@
-const bubs = Array => {
-  for (let i = 0; i < Array.length; i++) {
-    for (let j = 0; j < Array.length - 1; j++) {
-      if (Array[j] > Array[j + 1]) {
-        [Array[j], Array[j + 1]] = [Array[j + 1], Array[j]]
+const bubbleSort = array => {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]]
       }
     }
   }
-  return Array
+  return array
 };
 
-export default bubs
+export default bubbleSort
